@@ -367,6 +367,9 @@ ul.row {
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
   letter-spacing: var(--nav-item-letter-spacing);
+}
+
+.nav .nav-item + .nav-item {
   margin: var(--nav-item-margin);
 }
 
@@ -515,19 +518,24 @@ ul.row {
   min-height: 50vh;
 }
 
-/* Section Latest news ============================= */
+/* Section Latest news
+      ============================= */
 
 .section-latest-news .row {
   flex-direction: row-reverse;
 }
 
-/* Section SERVICES ============================= */
+/* Section SERVICES 
+      ============================= */
+
 .section-services .row {
   flex-wrap: wrap;
 }
 
-/* Section ABOUT US ============================= */
-[class*='coll-'] {
+/* Section ABOUT US
+      ============================= */
+
+.section-about-us [class*='col-'] {
   align-self: center;
 }
 

@@ -367,6 +367,9 @@ ul.row {
   font-weight: var(--nav-item-font-weight);
   font-size: var(--nav-item-font-size);
   letter-spacing: var(--nav-item-letter-spacing);
+}
+
+.nav .nav-item + .nav-item {
   margin: var(--nav-item-margin);
 }
 
@@ -497,10 +500,6 @@ ul.row {
       ============================= */
 
 .section-hero {
-  background-position: 75% 0;
-  background-repeat: no-repeat;
-  background-size: 90rem auto;
-  background-color: #010101;
   position: relative;
   margin-top: -8.5rem;
 }
@@ -533,19 +532,24 @@ ul.row {
   min-height: 50vh;
 }
 
-/* Section Latest news ============================= */
+/* Section Latest news
+      ============================= */
 
 .section-latest-news .row {
   flex-direction: row-reverse;
 }
 
-/* Section SERVICES ============================= */
+/* Section SERVICES 
+      ============================= */
+
 .section-services .row {
   flex-wrap: wrap;
 }
 
-/* Section ABOUT US ============================= */
-[class*='coll-'] {
+/* Section ABOUT US
+      ============================= */
+
+.section-about-us [class*='col-'] {
   align-self: center;
 }
 
@@ -678,8 +682,10 @@ ul.row {
 }
 
 /*** ARTICLE PAGE ***/
+
 /* Section HERO (article)
     ============================= */
+
 .hero-article {
   background-size: 150rem 100rem;
   background-position: 50% 0;
@@ -704,7 +710,7 @@ ul.row {
 
 .hero-article .section-body {
   position: relative;
-  padding: 7re 0 0;
+  padding: 7rem 0 0;
   z-index: 2;
 }
 
@@ -714,6 +720,7 @@ ul.row {
 
 /* Post
     ============================= */
+
 .post {
   display: flex;
 }
@@ -729,6 +736,7 @@ ul.row {
 
 /* Post Meta
     ============================= */
+
 .post-meta-list {
   flex-direction: column;
 }
@@ -740,19 +748,20 @@ ul.row {
   display: block;
 }
 
-.post-meta-list [class*='post-meta-'] {
+.post-meta-list [class*='post-meta'] {
   margin-bottom: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 0.2rem solid var(--color-light-grey);
 }
 
-.post-meta-list [class*='post-meta-']:last-child {
+.post-meta-list [class*='post-meta']:last-child {
   border: none;
   margin-bottom: 3rem;
 }
 
 /* Tag list
     ============================= */
+
 .tag-list {
   padding: 0;
   list-style: none;
@@ -766,6 +775,6 @@ ul.row {
   content: ', ';
 }
 
-.tag-list li:last-child:after {
+.tag-list li:last-child::after {
   content: '';
 }
