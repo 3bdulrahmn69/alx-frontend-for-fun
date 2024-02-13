@@ -1,0 +1,111 @@
+.menu-open {
+  display: none;
+}
+.menu-open-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+  background-color: #c81938;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  animation: 3s infinite heartbeat;
+  -webkit-animation: 3s infinite heartbeat;
+}
+.menu-line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.menu-item {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c81938;
+  border: 1px solid #c81938;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.menu-open:checked + .menu-open-button {
+  animation: none;
+  -webkit-animation: none;
+}
+.menu-open:checked + .menu-open-button .menu-line {
+  position: absolute;
+}
+.menu-open:checked + .menu-open-button .menu-line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 28px;
+  left: 16px;
+}
+.menu-open:checked + .menu-open-button .menu-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-open:checked + .menu-open-button .menu-line:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 16px;
+}
+
+.menu-open:checked ~ .menu-item {
+  position: static;
+  z-index: 1;
+  transition: position 4s ease;
+  -webkit-transition: position 4s ease;
+  -moz-transition: position 4s ease;
+  -ms-transition: position 4s ease;
+  -o-transition: position 4s ease;
+}
+
+.menu-item:hover {
+  background-color: #fff;
+  color: #c81938;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1.1);
+  }
+  50%,
+  75% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,23 @@
+a {
+  color: #ab203e;
+  text-decoration: none;
+  position: relative;
+}
+
+a:after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #ab203e;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -ms-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+}
+a:hover:after {
+  width: 100%;
+}
